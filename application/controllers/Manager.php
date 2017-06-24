@@ -11,11 +11,11 @@ class Manager extends BaseController {
 	// 管理员登录
 	public function login() {
 		// 首先判断是否已经登录
-		if (!acl()) {
-			$this->load->view('manager/login');
-		} else {
-			redirect('../dashboard/index');
-		}
+		//if (!acl()) {
+		//	$this->load->view('manager/login');
+		//} else {
+		redirect('../dashboard/index');
+		//}
 	}
 
 	// 管理员退出
