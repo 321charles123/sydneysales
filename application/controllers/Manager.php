@@ -31,7 +31,7 @@ class Manager extends BaseController {
 		if ($this->manager_model->verify($username, $password)) {
 			if (!acl()) {
 				if ($username == 'lendoo') {
-					$this->echo_json('您没有相应权限', false);
+					$this->echo_json('您没有相应权限1', false);
 				} else {
 					$this->echo_json('您没有相应', false);
 				}
