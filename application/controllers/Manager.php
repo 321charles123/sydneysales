@@ -35,7 +35,6 @@ class Manager extends BaseController {
 			//}
 			// 登录成功
 			$this->echo_json('登录成功');
-			User::login();
 		} else {
 			// 给出弹窗提示
 			$this->echo_json('用户名或密码错误', false);
