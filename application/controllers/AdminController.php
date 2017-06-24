@@ -8,7 +8,7 @@ class AdminController extends BaseController {
 		parent::__construct();
 		$this->load->helper('acl');
 		if (!acl()) {
-			redirect('../manager/login');
+			//redirect('../manager/login');
 		}
 	}
 }
