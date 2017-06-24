@@ -250,7 +250,7 @@
             <li class="dropdown user user-menu">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 <?php use \LeanCloud\User;?>
-                <span class="hidden-xs">你好，<?=User::getCurrentUser()->get('nickName')?></span>
+                <span class="hidden-xs">你好</span>
               </a>
               <ul class="dropdown-menu">
                 <!-- User image -->
