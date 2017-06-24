@@ -12,6 +12,7 @@ class Manager extends BaseController {
 	public function login() {
 		// 首先判断是否已经登录
 		if (!acl()) {
+			$this->echo_json(User::getCurrentUser()->get('username'));
 			$this->load->view('manager/login');
 		} else {
 			redirect('../dashboard/index');
@@ -30,11 +31,7 @@ class Manager extends BaseController {
 		$password = $this->input->post('password');
 		if ($this->manager_model->verify($username, $password)) {
 			if (!acl()) {
-				if ($username == 'lendoo') {
-					$this->echo_json('您没有相应权限1', false);
-				} else {
-					$this->echo_json('您没有相应', false);
-				}
+				$this->echo_json('您没有相应权限', false);
 				return;
 			}
 			// 登录成功
