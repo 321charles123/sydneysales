@@ -29,10 +29,10 @@ class Manager extends BaseController {
 		$username = $this->input->post('username');
 		$password = $this->input->post('password');
 		if ($this->manager_model->verify($username, $password)) {
-			if (!acl()) {
-				$this->echo_json('您没有相应权限', false);
-				return;
-			}
+			//if (!acl()) {
+			//	$this->echo_json('您没有相应权限', false);
+			//	return;
+			//}
 			// 登录成功
 			$this->echo_json('登录成功');
 		} else {
