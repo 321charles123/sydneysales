@@ -8,7 +8,7 @@ class BaseController extends CI_Controller {
 	function __construct() {
 		parent::__construct();
 		// 参数依次为 AppId, AppKey, MasterKey
-		Client::initialize("SgHcsYqoLaFTG0XDMD3Gtm0I-gzGzoHsz", "xdv2nwjUK5waNglFoFXkQcxP" ,"v3P5xzDa0b5CStO0xX0biHpT");
+		Client::initialize("uDbkNGtzktRLoURqW5MPlI9r-MdYXbMMI", "5DLQc7F2Lj05xXgYEvdMnNcl" ,"uC8BDkONpEzCmDD4BmPSJARt");
 		Client::useMasterKey(true);
 		Client::setStorage(new CookieStorage());
 	}
