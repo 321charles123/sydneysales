@@ -9,7 +9,7 @@ use \LeanCloud\Engine\Cloud;
 use \LeanCloud\Client;
 use \LeanCloud\Storage\CookieStorage;
 use \LeanCloud\Object;
-
+/*
  * Define cloud functions and hooks on LeanCloud
  */
 
