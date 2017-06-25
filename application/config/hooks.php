@@ -8,7 +8,8 @@ use \LeanCloud\Engine\LeanEngine;
 use \LeanCloud\Engine\Cloud;
 use \LeanCloud\Client;
 use \LeanCloud\Storage\CookieStorage;
-/*
+use \LeanCloud\Object;
+
  * Define cloud functions and hooks on LeanCloud
  */
 
@@ -71,5 +72,13 @@ $hook['pre_system'] = function() {
 	Client::setStorage(new CookieStorage());
 	$engine = new CIEngine();
 	// 以下是核心语句，直接像使用函数那样在对象上调用
+	$testObject = new Object("TestObject");
+	$testObject->set("words", "Hello World!");
+	try {
+   		$testObject->save();
+    	echo "Save object success!";
+	} catch (Exception $ex) {
+   		echo "Save object fail!";
+	}
 	$engine();
 };
